@@ -4,7 +4,6 @@
 
 .top-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   margin-bottom: 2rem;
@@ -14,11 +13,14 @@
 .logo {
   width: 150px;
   height: auto;
+  margin-right: 2rem; /* optional spacing */
 }
 
 .nav-links {
   display: flex;
-  gap: 1.5rem;
+  flex: 1; /* take up remaining space */
+  justify-content: space-evenly; /* evenly spaced links */
+  align-items: center;
 }
 
 .nav-links a {
