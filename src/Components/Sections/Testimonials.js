@@ -1,13 +1,24 @@
-function TestimonialsSection() {
+const testimonials = [
+  { name: "Sarah", rating: 5, text: "Amazing food!" },
+  { name: "John", rating: 4, text: "Loved the atmosphere." },
+  { name: "Maria", rating: 5, text: "Best Mediterranean in Chicago!" },
+];
+
+function TestimonialSection() {
   return (
-    <section className="testimonials-section">
-      <h2>Testimonials</h2>
-      <div className="cards">
-        <div className="card">Card 1</div>
-        <div className="card">Card 2</div>
-        <div className="card">Card 3</div>
+    <section className="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div className="testimonial-grid">
+        {testimonials.map((t, i) => (
+          <div className="testimonial-card" key={i}>
+            <h3>{t.name}</h3>
+            <p>{"⭐".repeat(t.rating)}</p>
+            <p>{t.text}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-export default TestimonialsSection;
+
+export default TestimonialSection;

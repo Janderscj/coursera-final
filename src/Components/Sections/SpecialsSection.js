@@ -1,13 +1,24 @@
-function SpecialsSection() {
+const specials = [
+  { title: "Greek Salad", price: "$12.99", description: "Crisp lettuce..." },
+  { title: "Bruschetta", price: "$5.99", description: "Grilled bread..." },
+  { title: "Lemon Dessert", price: "$4.99", description: "Sweet and tart..." },
+];
+
+function SpecialSection() {
   return (
-    <section className="specials-section">
-      <h2>Specials</h2>
-      <div className="cards">
-        <div className="card">Card 1</div>
-        <div className="card">Card 2</div>
-        <div className="card">Card 3</div>
+    <section className="specials">
+      <h2>This Week’s Specials</h2>
+      <div className="specials-grid">
+        {specials.map((item, i) => (
+          <div className="special-card" key={i}>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+            <span>{item.price}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
 }
-export default SpecialsSection;
+
+export default SpecialSection;
