@@ -43,7 +43,26 @@ section {
 }
 
 .hero-section {
-  padding: 3rem 0;
+  background-color: #495e57;
+  padding: 3rem 3rem 2rem 3rem;
+}
+.hero-section h1 {
+  font-family: "Markazi Text";
+  color: #f4ce14;
+  font-size: 64px;
+  font-weight: medium;
+  margin-bottom: 1rem;
+}
+.hero-section h2 {
+  font-family: "Karla";
+  color: #edefee;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+.hero-section p {
+  color: #edefee;
+  font-size: 1.2rem;
 }
 
 .cards {
