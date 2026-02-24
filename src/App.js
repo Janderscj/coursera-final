@@ -7,14 +7,14 @@ import BookingPage from "./Components/Pages/BookingPage";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Nav />
 
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/reservations" element={<BookingPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
