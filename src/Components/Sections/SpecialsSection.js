@@ -29,7 +29,10 @@ const specials = [
 function SpecialSection() {
   return (
     <section className="specials-section">
-      <h2>This Week’s Specials</h2>
+      <span className="specials-header">
+        <h2>Specials</h2>
+        <button className="special-button">Order Online</button>
+      </span>
       <div className="specials-grid">
         {specials.map((item, i) => (
           <div className="special-card" key={i}>
@@ -41,7 +44,7 @@ function SpecialSection() {
               </h3>
               <span className="special-description">{item.description}</span>
             </div>
-            <button className="special-button">{item.footer}</button>
+            <button className="special-card-button">{item.footer}</button>
           </div>
         ))}
       </div>

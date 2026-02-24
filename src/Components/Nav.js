@@ -7,7 +7,7 @@ function Nav() {
       <img src={logo} alt="Little Lemon Logo" className="logo" />
 
       <nav className="nav-links" id="navbar">
-        <a href="#navbar">Home</a>
+        <Link to="/">Home</Link>
         <a href="#about">About</a>
         <Link to="/menu">Menu</Link>
         <Link to="/reservations">Reservations</Link>
