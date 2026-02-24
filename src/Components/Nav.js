@@ -6,9 +6,9 @@ function Nav() {
     <header className="top-header">
       <img src={logo} alt="Little Lemon Logo" className="logo" />
 
-      <nav className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+      <nav className="nav-links" id="navbar">
+        <a href="#navbar">Home</a>
+        <a href="#about">About</a>
         <Link to="/menu">Menu</Link>
         <Link to="/reservations">Reservations</Link>
         <Link to="/order">Order Online</Link>

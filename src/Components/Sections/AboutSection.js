@@ -3,7 +3,7 @@ import aboutImg2 from "../../Assets/MarioAdrian.jpg";
 
 function AboutSection() {
   return (
-    <section className="about-section">
+    <section id="about" className="about-section">
       <div className="about-content">
         <div className="about-text">
           <h1>Little Lemon</h1>

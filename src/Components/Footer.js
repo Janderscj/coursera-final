@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import footerLogo from "../Assets/footerLogo.png";
 
 function Footer() {
@@ -10,13 +11,13 @@ function Footer() {
 
         <div className="footer-column">
           <h4>Navigation</h4>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
+          <ul className="footer-links">
+            <a href="#navbar">Home</a>
+            <a href="#about">About</a>
+            <Link to="/menu">Menu</Link>
+            <Link to="/reservations">Reservations</Link>
+            <Link to="/order">Order Online</Link>
+            <Link to="/login">Login</Link>
           </ul>
         </div>
 

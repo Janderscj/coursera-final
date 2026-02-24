@@ -1,7 +1,7 @@
 import HeroImg from "../../Assets/restauranfood.jpg";
 function HeroSection() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="home">
       <div>
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
