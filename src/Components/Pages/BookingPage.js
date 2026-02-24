@@ -1,6 +1,9 @@
+import BookingHero from "../Sections/BookingHero";
+
 function BookingPage() {
   return (
     <section className="booking">
+      <BookingHero />
       <h2>Reserve a Table</h2>
       <form>
         <label>Date</label>

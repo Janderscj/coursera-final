@@ -328,6 +328,45 @@ section {
     margin-bottom: 2rem;
   }
 }
+.booking-hero {
+  background-color: #495e57;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  overflow: visible;
+  min-height: 280px;
+  max-height: 800px;
+}
+
+.booking-hero h1 {
+  font-family: "Markazi Text";
+  color: #f4ce14;
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.booking-hero h2 {
+  font-family: "Karla";
+  color: #edefee;
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+.booking-hero-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.booking-hero-image {
+  position: relative;
+  max-width: 460px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+}
 html {
   scroll-behavior: smooth;
 }
