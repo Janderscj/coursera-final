@@ -234,20 +234,21 @@
 .about-section h1 {
   font-family: "Markazi Text";
   font-size: 64px;
-  color: #333;
+  color: #333333;
   margin-bottom: 0rem;
 }
 
 .about-section h2 {
   font-family: "Karla";
   font-size: 40px;
-  color: #333;
+  color: #333333;
   margin-top: 0rem;
 }
 
 .about-section p {
+  max-width: 480px;
   font-size: 16px;
-  color: #333;
+  color: #333333;
 }
 
 .about-images {
