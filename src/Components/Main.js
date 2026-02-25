@@ -1,7 +1,8 @@
 import { useReducer } from "react";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import { fetchAPI, submitAPI } from "/src/api";
+import { fetchAPI, submitAPI } from "../api";
+import { useNavigate } from "react-router-dom";
 import Homepage from "./Pages/Homepage";
 import BookingPage from "./Pages/BookingPage";
 
@@ -11,6 +12,7 @@ function Main() {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
   const [bookedTimes, setBookedTimes] = useState([]);
+  const navigate = useNavigate();
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
     [],
@@ -29,7 +31,19 @@ function Main() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setBookedTimes((prev) => [...prev, time]);
+
+    const formData = {
+      date,
+      time,
+      guests,
+      occasion,
+    };
+
+    const success = submitAPI(formData);
+
+    if (success) {
+      navigate("/confirmation", { state: formData });
+    }
   }
 
   return (
