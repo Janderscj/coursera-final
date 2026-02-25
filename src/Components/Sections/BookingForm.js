@@ -8,6 +8,7 @@ function BookingForm({
   occasion,
   setOccasion,
   availableTimes,
+  dispatch,
   onSubmit,
 }) {
   return (
@@ -18,7 +19,10 @@ function BookingForm({
           type="date"
           id="res-date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => {
+            setDate(e.target.value);
+            dispatch({ type: "update_times", date: e.target.value });
+          }}
         />
 
         <label htmlFor="res-time">Choose time</label>

@@ -10,7 +10,7 @@ function Nav() {
         <Link to="/">Home</Link>
         <a href="#about">About</a>
         <Link to="/menu">Menu</Link>
-        <Link to="/reservations">Reservations</Link>
+        <Link to="/booking">Reservations</Link>
         <Link to="/order">Order Online</Link>
         <Link to="/login">Login</Link>
       </nav>

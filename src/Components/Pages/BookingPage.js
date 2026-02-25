@@ -13,6 +13,7 @@ function BookingPage({
   setOccasion,
   availableTimes,
   bookedTimes,
+  dispatch,
   onSubmit,
 }) {
   return (
@@ -30,6 +31,7 @@ function BookingPage({
         occasion={occasion}
         setOccasion={setOccasion}
         availableTimes={availableTimes}
+        dispatch={dispatch}
         onSubmit={onSubmit}
       />
 
