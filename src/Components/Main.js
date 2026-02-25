@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { fetchAPI, submitAPI } from "/src/api";
 import Homepage from "./Pages/Homepage";
 import BookingPage from "./Pages/BookingPage";
 
@@ -9,20 +10,23 @@ function Main() {
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
+  const [bookedTimes, setBookedTimes] = useState([]);
   const [availableTimes, dispatch] = useReducer(
     updateTimes,
     [],
     initializeTimes,
   );
 
-  const [bookedTimes, setBookedTimes] = useState([]);
-
   function initializeTimes() {
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    return fetchAPI(new Date()).map((time) => time.time);
   }
   function updateTimes(state, action) {
-    return initializeTimes();
+    if (action.type === "update_times") {
+      return fetchAPI(new Date(action.date));
+    }
+    return state;
   }
+
   function handleSubmit(e) {
     e.preventDefault();
     setBookedTimes((prev) => [...prev, time]);
