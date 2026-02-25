@@ -1,8 +1,20 @@
 import React from "react";
+
 function validateForm({ date, time, guests, occasion }) {
   const errors = {};
 
-  if (!date) errors.date = "Please choose a date.";
+  if (!date) {
+    errors.date = "Please choose a date.";
+  } else {
+    const selected = new Date(date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (selected < today) {
+      errors.date = "Date cannot be in the past.";
+    }
+  }
+
   if (!time) errors.time = "Please choose a time.";
   if (guests < 1 || guests > 10)
     errors.guests = "Guests must be between 1 and 10.";

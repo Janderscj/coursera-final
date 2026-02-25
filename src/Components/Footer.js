@@ -1,7 +1,39 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import footerLogo from "../Assets/footerLogo.png";
 
 function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  function handleHomeClick(e) {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      e.preventDefault();
+      navigate("/");
+    }
+  }
+
+  // Reuse the same about click handler from Nav.js for consistency
+  function handleAboutClick(e) {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      document.getElementById("about")?.scrollIntoView({
+        behavior: "smooth",
+      });
+    } else {
+      e.preventDefault();
+      navigate("/");
+
+      setTimeout(() => {
+        document.getElementById("about")?.scrollIntoView({
+          behavior: "smooth",
+        });
+      }, 100);
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="footer-grid">
@@ -12,8 +44,12 @@ function Footer() {
         <div className="footer-column">
           <h4>Navigation</h4>
           <ul className="footer-links">
-            <Link to="/">Home</Link>
-            <a href="#about">About</a>
+            <a href="/" onClick={handleHomeClick}>
+              Home
+            </a>
+            <a href="#about" onClick={handleAboutClick}>
+              About
+            </a>
             <Link to="/menu">Menu</Link>
             <Link to="/booking">Reservations</Link>
             <Link to="/order">Order Online</Link>
