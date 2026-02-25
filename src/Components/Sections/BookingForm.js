@@ -1,20 +1,14 @@
-import { useState } from "react";
-
-function BookingForm() {
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState("");
-
-  const [availableTimes] = useState([
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ]);
-
+function BookingForm({
+  date,
+  setDate,
+  time,
+  setTime,
+  guests,
+  setGuests,
+  occasion,
+  setOccasion,
+  availableTimes,
+}) {
   return (
     <section className="booking-form">
       <form>
@@ -43,7 +37,6 @@ function BookingForm() {
         <input
           type="number"
           id="guests"
-          placeholder="1"
           min="1"
           max="10"
           value={guests}
