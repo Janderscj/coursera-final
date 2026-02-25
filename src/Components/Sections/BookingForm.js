@@ -24,7 +24,9 @@ function BookingForm({
   dispatch,
   onSubmit,
 }) {
-  const [errors, setErrors] = React.useState({});
+  const [errors, setErrors] = React.useState(
+    validateForm({ date, time, guests, occasion }),
+  );
 
   return (
     <section className="booking-form">

@@ -388,6 +388,71 @@
   border-radius: 16px;
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
 }
+
+.booking-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #495e57;
+  outline: none;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+  margin-bottom: -0.5rem;
+}
+
+.booking-form input[type="submit"] {
+  background: #f4ce14;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.booking-form input[type="submit"]:hover:not(:disabled) {
+  background: #e3bf12;
+}
+
+.booking-form input[type="submit"]:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
 html {
   scroll-behavior: smooth;
 }
