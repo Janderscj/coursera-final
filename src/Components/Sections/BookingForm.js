@@ -8,10 +8,11 @@ function BookingForm({
   occasion,
   setOccasion,
   availableTimes,
+  onSubmit,
 }) {
   return (
     <section className="booking-form">
-      <form>
+      <form onSubmit={onSubmit}>
         <label htmlFor="res-date">Choose date</label>
         <input
           type="date"
