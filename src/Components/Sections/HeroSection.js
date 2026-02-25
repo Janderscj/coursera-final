@@ -6,10 +6,13 @@ function HeroSection() {
       <div className="hero-text">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
-        <p>Fresh Mediterranean flavors.</p>
-        <button className="hero-button">
-          <Link to="/booking">Reserve a Table</Link>
-        </button>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <Link to="/booking" className="hero-button">
+          Reserve a Table
+        </Link>
       </div>
       <div className="hero-image-wrapper">
         <img src={HeroImg} alt="Restaurant Food" className="hero-image" />

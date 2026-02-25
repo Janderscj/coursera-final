@@ -42,6 +42,7 @@ function BookingForm({
 
   return (
     <section className="booking-form">
+      <h2>Book Your Table</h2>
       <form onSubmit={onSubmit}>
         <label htmlFor="res-date">Choose date</label>
         <input

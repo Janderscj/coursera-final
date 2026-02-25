@@ -45,14 +45,14 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 2rem;
-  margin-bottom: 2rem;
+  padding: 1rem 2rem;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  height: 100%;
+  gap: 1.25rem;
 }
 
 .hero-section h1 {
@@ -69,26 +69,36 @@
   font-size: 40px;
   padding-bottom: 1rem;
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-section p {
   color: #edefee;
+  font-family: "Karla";
+  max-width: 400px;
   font-size: 16px;
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 .hero-button {
+  display: flex;
+  align-items: flex-end;
   justify-content: center;
-  margin-top: 4rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 1rem 0;
+  margin-top: 6rem;
+  padding: 1rem 1rem;
   border: none;
-  border-radius: 16px;
+  border-radius: 18px;
   background: #f4ce14;
   color: #333;
+  font-family: "Karla";
+  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+}
+.hero-button:link,
+.hero-button:visited {
+  color: #333;
+  background: #f4ce14;
+  text-decoration: none;
 }
 
 .hero-image-wrapper {
@@ -103,6 +113,7 @@
   box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   bottom: -60px;
+  right: -20px;
 }
 
 .specials-section {
@@ -117,7 +128,7 @@
 .specials-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem;
   flex-wrap: wrap;
 }
 .specials-header {
@@ -135,6 +146,7 @@
   min-height: 420px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -176,7 +188,6 @@
 .special-card-button {
   padding: 2rem 1rem;
   justify-content: center;
-  flex: 0.7;
   margin-top: 2rem;
   border: none;
   border-top-left-radius: 16px;
@@ -193,6 +204,12 @@
   padding: 2rem 2rem 2rem 2rem;
   justify-content: center;
   gap: 2rem;
+}
+.testimonials h2 {
+  font-family: "Karla";
+  font-size: 40px;
+  color: #edefee;
+  margin-bottom: 2rem;
 }
 .testimonial-grid {
   display: flex;
@@ -211,6 +228,7 @@
   font-weight: bold;
   width: 300px;
   min-height: 420px;
+  padding: 2rem;
 }
 .about-section {
   padding: 4rem 2rem;
@@ -393,45 +411,80 @@
   max-width: 500px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #fdfdfd;
+  background: #495e57;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+}
+.booking-form h2 {
+  font-family: "Markazi Text";
+  color: #edefee;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .booking-form form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .booking-form label {
   font-weight: 600;
-  color: #333;
+  color: #edefee;
+  margin-top: 2rem;
   margin-bottom: 0.3rem;
 }
 
 .booking-form input,
 .booking-form select {
   padding: 0.7rem 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #cbd2d0;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
-  background: white;
-  transition: border-color 0.2s ease;
+  background: #ffffff;
+  color: #333;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .booking-form input:focus,
 .booking-form select:focus {
-  border-color: #495e57;
+  border-color: #f4ce14;
+  box-shadow: 0 0 0 2px rgba(244, 206, 20, 0.3);
   outline: none;
+}
+.booking-form input[type="submit"] {
+  background: #f4ce14;
+  color: #333;
+  font-weight: bold;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.booking-form input[type="submit"]:hover:not(:disabled) {
+  background: #e3bd0f;
+  transform: translateY(-2px);
+}
+
+.booking-form input[type="submit"]:disabled {
+  background: #cbd2d0;
+  cursor: not-allowed;
 }
 
 .error {
-  color: #d9534f;
+  color: #f4a261;
   font-size: 0.9rem;
-  margin-top: -0.8rem;
-  margin-bottom: -0.5rem;
+  margin-top: -0.5rem;
 }
 
 .booking-form input[type="submit"] {

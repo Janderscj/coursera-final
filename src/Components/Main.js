@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { fetchAPI, submitAPI } from "../api.js";
+import { fetchAPI, submitAPI } from "../api";
 
 import Homepage from "./Pages/Homepage";
 import BookingPage from "./Pages/BookingPage";

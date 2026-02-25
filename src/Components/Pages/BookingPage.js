@@ -19,8 +19,6 @@ function BookingPage({
   return (
     <section className="booking" id="reservations">
       <BookingHero />
-      <h2>Reserve a Table</h2>
-
       <BookingForm
         date={date}
         setDate={setDate}
@@ -33,11 +31,6 @@ function BookingPage({
         availableTimes={availableTimes}
         dispatch={dispatch}
         onSubmit={onSubmit}
-      />
-
-      <BookingSlotList
-        availableTimes={availableTimes}
-        bookedTimes={bookedTimes}
       />
     </section>
   );
