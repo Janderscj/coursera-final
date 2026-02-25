@@ -1,3 +1,16 @@
+import React from "react";
+function validateForm({ date, time, guests, occasion }) {
+  const errors = {};
+
+  if (!date) errors.date = "Please choose a date.";
+  if (!time) errors.time = "Please choose a time.";
+  if (guests < 1 || guests > 10)
+    errors.guests = "Guests must be between 1 and 10.";
+  if (!occasion) errors.occasion = "Please select an occasion.";
+
+  return errors;
+}
+
 function BookingForm({
   date,
   setDate,
@@ -11,6 +24,8 @@ function BookingForm({
   dispatch,
   onSubmit,
 }) {
+  const [errors, setErrors] = React.useState({});
+
   return (
     <section className="booking-form">
       <form onSubmit={onSubmit}>
@@ -22,14 +37,33 @@ function BookingForm({
           onChange={(e) => {
             setDate(e.target.value);
             dispatch({ type: "update_times", date: e.target.value });
+            setErrors(
+              validateForm({
+                date: e.target.value,
+                time,
+                guests,
+                occasion,
+              }),
+            );
           }}
         />
+        {errors.date && <p className="error">{errors.date}</p>}
 
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
-          onChange={(e) => setTime(e.target.value)}
+          onChange={(e) => {
+            setTime(e.target.value);
+            setErrors(
+              validateForm({
+                date,
+                time: e.target.value,
+                guests,
+                occasion,
+              }),
+            );
+          }}
         >
           {availableTimes.map((t) => (
             <option key={t} value={t}>
@@ -37,6 +71,7 @@ function BookingForm({
             </option>
           ))}
         </select>
+        {errors.time && <p className="error">{errors.time}</p>}
 
         <label htmlFor="guests">Number of guests</label>
         <input
@@ -45,21 +80,47 @@ function BookingForm({
           min="1"
           max="10"
           value={guests}
-          onChange={(e) => setGuests(e.target.value)}
+          onChange={(e) => {
+            setGuests(e.target.value);
+            setErrors(
+              validateForm({
+                date,
+                time,
+                guests: e.target.value,
+                occasion,
+              }),
+            );
+          }}
         />
+        {errors.guests && <p className="error">{errors.guests}</p>}
 
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}
+          onChange={(e) => {
+            setOccasion(e.target.value);
+            setErrors(
+              validateForm({
+                date,
+                time,
+                guests,
+                occasion: e.target.value,
+              }),
+            );
+          }}
         >
           <option value="">Select an option</option>
           <option value="Birthday">Birthday</option>
           <option value="Anniversary">Anniversary</option>
         </select>
+        {errors.occasion && <p className="error">{errors.occasion}</p>}
 
-        <input type="submit" value="Make Your reservation" />
+        <input
+          type="submit"
+          value="Make Your reservation"
+          disabled={Object.keys(errors).length > 0}
+        />
       </form>
     </section>
   );

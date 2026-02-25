@@ -8,7 +8,7 @@ function HeroSection() {
         <h2>Chicago</h2>
         <p>Fresh Mediterranean flavors.</p>
         <button className="hero-button">
-          <Link to="/reservations">Reserve a Table</Link>
+          <Link to="/booking">Reserve a Table</Link>
         </button>
       </div>
       <div className="hero-image-wrapper">

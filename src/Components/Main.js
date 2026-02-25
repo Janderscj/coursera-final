@@ -1,10 +1,10 @@
-import { useReducer } from "react";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useReducer, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { fetchAPI, submitAPI } from "../api";
-import { useNavigate } from "react-router-dom";
+
 import Homepage from "./Pages/Homepage";
 import BookingPage from "./Pages/BookingPage";
+import ConfirmationPage from "./Pages/ConfirmationPage";
 
 function Main() {
   const [date, setDate] = useState("");
@@ -12,22 +12,25 @@ function Main() {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("");
   const [bookedTimes, setBookedTimes] = useState([]);
+
   const navigate = useNavigate();
-  const [availableTimes, dispatch] = useReducer(
-    updateTimes,
-    [],
-    initializeTimes,
-  );
 
   function initializeTimes() {
-    return fetchAPI(new Date()).map((time) => time.time);
+    return fetchAPI(new Date());
   }
+
   function updateTimes(state, action) {
     if (action.type === "update_times") {
       return fetchAPI(new Date(action.date));
     }
     return state;
   }
+
+  const [availableTimes, dispatch] = useReducer(
+    updateTimes,
+    [],
+    initializeTimes,
+  );
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -50,6 +53,7 @@ function Main() {
     <div className="page-container">
       <Routes>
         <Route path="/" element={<Homepage />} />
+
         <Route
           path="/booking"
           element={
@@ -69,6 +73,8 @@ function Main() {
             />
           }
         />
+
+        <Route path="/confirmation" element={<ConfirmationPage />} />
       </Routes>
     </div>
   );
