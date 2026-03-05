@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function ConfirmationPage() {
   const { state } = useLocation();
@@ -25,9 +25,9 @@ function ConfirmationPage() {
           </li>
         </ul>
 
-        <a href="/" className="back-home-btn">
-          Return Home
-        </a>
+        <Link to="/" className="back-home-btn">
+          Home
+        </Link>
       </div>
     </section>
   );
