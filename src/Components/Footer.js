@@ -44,12 +44,13 @@ function Footer() {
         <div className="footer-column">
           <h4>Navigation</h4>
           <ul className="footer-links">
-            <a href="/" onClick={handleHomeClick}>
+            <Link to="/" onClick={handleHomeClick}>
               Home
-            </a>
-            <a href="#about" onClick={handleAboutClick}>
+            </Link>
+
+            <Link to="/" onClick={handleAboutClick}>
               About
-            </a>
+            </Link>
             <Link to="/menu">Menu</Link>
             <Link to="/booking">Reservations</Link>
             <Link to="/order">Order Online</Link>
