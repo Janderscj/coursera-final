@@ -39,12 +39,14 @@ function Nav() {
       <img src={logo} alt="Little Lemon Logo" className="logo" />
 
       <nav className="nav-links" id="navbar">
-        <a href="/" onClick={handleHomeClick}>
+        <Link to="/" onClick={handleHomeClick}>
           Home
-        </a>
-        <a href="#about" onClick={handleAboutClick}>
+        </Link>
+
+        <Link to="/" onClick={handleAboutClick}>
           About
-        </a>
+        </Link>
+
         <Link to="/menu">Menu</Link>
         <Link to="/booking">Reservations</Link>
         <Link to="/order">Order Online</Link>
