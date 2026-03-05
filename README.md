@@ -1,4 +1,4 @@
-A React application built as part of the Meta Front-End Developer program.
+This project is a React application built as the final project of the Meta Front-End Developer program.
 This project implements a full reservation flow including dynamic time availability, form validation, confirmation routing, and branded UI styling
 Features
 - Fully functional booking form
