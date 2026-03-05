@@ -52,6 +52,7 @@ function Main() {
   return (
     <div className="page-container">
       <Routes>
+        <Route path="*" element={<Homepage />} />
         <Route path="/" element={<Homepage />} />
 
         <Route
