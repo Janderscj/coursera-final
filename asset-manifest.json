@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/coursera-final/static/css/main.d375fd40.css",
+    "main.css": "/coursera-final/static/css/main.0b246efe.css",
     "main.js": "/coursera-final/static/js/main.cf54c14a.js",
     "static/media/MarioAdrian.jpg": "/coursera-final/static/media/MarioAdrian.6ba0e06bfa9c1ea75109.jpg",
     "static/media/bruchetta.svg": "/coursera-final/static/media/bruchetta.29ea078fea3d3120ed22402e901b5bbc.svg",
@@ -10,11 +10,11 @@
     "static/media/restaurant.jpg": "/coursera-final/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
     "static/media/Logo .svg": "/coursera-final/static/media/Logo .f72c913c48c5334f78f2c336ec36f22b.svg",
     "index.html": "/coursera-final/index.html",
-    "main.d375fd40.css.map": "/coursera-final/static/css/main.d375fd40.css.map",
+    "main.0b246efe.css.map": "/coursera-final/static/css/main.0b246efe.css.map",
     "main.cf54c14a.js.map": "/coursera-final/static/js/main.cf54c14a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d375fd40.css",
+    "static/css/main.0b246efe.css",
     "static/js/main.cf54c14a.js"
   ]
 }
