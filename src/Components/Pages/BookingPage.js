@@ -1,6 +1,7 @@
 import BookingHero from "../Sections/BookingHero";
 import BookingForm from "../Sections/BookingForm";
 import BookingSlotList from "../Sections/BookingSlotList";
+import "../../Styles/Booking.css";
 
 function BookingPage({
   date,

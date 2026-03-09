@@ -1,0 +1,35 @@
+/* ------------------------------------------------------ */
+/* GLOBAL LAYOUT RULES */
+/* ------------------------------------------------------ */
+.App {
+  margin: 0 auto;
+  padding: 0.25rem 1.25rem;
+}
+
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-5);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: var(--bp-md)) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}

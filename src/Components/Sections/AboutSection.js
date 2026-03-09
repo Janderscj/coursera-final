@@ -1,5 +1,6 @@
 import aboutImg1 from "../../Assets/restaurant-chef.jpg";
 import aboutImg2 from "../../Assets/MarioAdrian.jpg";
+import "../../Styles/About.css";
 
 function AboutSection() {
   return (
@@ -18,9 +19,13 @@ function AboutSection() {
           <img
             src={aboutImg1}
             alt="Restaurant interior"
-            className="img img-1"
+            className="img img-1 img-featured"
           />
-          <img src={aboutImg2} alt="Restaurant food" className="img img-2" />
+          <img
+            src={aboutImg2}
+            alt="Restaurant food"
+            className="img img-2 img-featured"
+          />
         </div>
       </div>
     </section>

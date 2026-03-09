@@ -1,0 +1,36 @@
+/* ------------------------------------------------------ */
+/* TESTIMONIALS SECTION */
+/* ------------------------------------------------------ */
+
+.testimonials {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 2rem 2rem 2rem 2rem;
+  justify-content: center;
+  gap: 2rem;
+}
+.testimonials h2 {
+  font-family: var(--font-body);
+  font-size: var(--heading-lg);
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+.testimonial-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+}
+.testimonial-card {
+  background: var(--light-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: 16pt;
+  font-weight: bold;
+  width: 300px;
+  min-height: 420px;
+  padding: 2rem;
+}

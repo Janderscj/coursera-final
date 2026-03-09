@@ -1,3 +1,4 @@
+import "../../Styles/Testimonials.css";
 const testimonials = [
   { name: "Sarah", rating: 5, text: "Amazing food!" },
   { name: "John", rating: 4, text: "Loved the atmosphere." },

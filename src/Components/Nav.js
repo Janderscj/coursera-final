@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo from "../Assets/Logo .svg";
+import "../Styles/Header.css";
 
 function Nav() {
   const location = useLocation();

@@ -1,4 +1,5 @@
 import HeroImg from "../../Assets/restaurant.jpg";
+import "../../Styles/Booking.css";
 
 function BookingHero() {
   return (
@@ -11,7 +12,7 @@ function BookingHero() {
         <img
           src={HeroImg}
           alt="Restaurant Food"
-          className="booking-hero-image"
+          className="booking-hero-image img-hero"
         />
       </div>
     </section>

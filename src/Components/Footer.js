@@ -1,5 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import footerLogo from "../Assets/footerLogo.png";
+import "../Styles/Footer.css";
 
 function Footer() {
   const location = useLocation();
@@ -38,7 +39,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div className="footer-logo">
-          <img src={footerLogo} alt="Little Lemon Logo" />
+          <img src={footerLogo} alt="Little Lemon Logo" className="img-logo" />
         </div>
 
         <div className="footer-column">

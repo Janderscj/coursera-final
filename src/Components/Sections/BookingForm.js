@@ -1,4 +1,5 @@
 import React from "react";
+import "../../Styles/Booking.css";
 
 function validateForm({ date, time, guests, occasion }) {
   const errors = {};

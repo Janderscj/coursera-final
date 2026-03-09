@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import HeroImg from "../../Assets/restauranfood.jpg";
+import "../../Styles/Hero.css";
+
 function HeroSection() {
   return (
     <section className="hero-section" id="home">
@@ -15,7 +17,11 @@ function HeroSection() {
         </Link>
       </div>
       <div className="hero-image-wrapper">
-        <img src={HeroImg} alt="Restaurant Food" className="hero-image" />
+        <img
+          src={HeroImg}
+          alt="Restaurant Food"
+          className="hero-image img-hero"
+        />
       </div>
     </section>
   );

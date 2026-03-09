@@ -1,4 +1,5 @@
 import BookingSlot from "./BookingSlot";
+import "../../Styles/Booking.css";
 
 function BookingSlotList({ availableTimes, bookedTimes }) {
   return (

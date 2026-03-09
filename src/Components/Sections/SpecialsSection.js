@@ -1,6 +1,7 @@
 import greekSalad from "../../Assets/greek salad.jpg";
 import bruschetta from "../../Assets/Bruchetta.png";
 import lemonDessert from "../../Assets/lemon dessert.jpg";
+import "../../Styles/Specials.css";
 
 const specials = [
   {
@@ -39,7 +40,11 @@ function SpecialSection() {
       <div className="specials-grid">
         {specials.map((item, i) => (
           <div className="special-card" key={i}>
-            <img src={item.Image} alt={item.title} className="special-image" />
+            <img
+              src={item.Image}
+              alt={item.title}
+              className="special-image img-card"
+            />
             <div className="special-text">
               <h3 className="special-title">
                 {item.title}
