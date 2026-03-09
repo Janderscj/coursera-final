@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coursera-final/static/css/main.0b246efe.css",
-    "main.js": "/coursera-final/static/js/main.46c8a726.js",
+    "main.css": "/coursera-final/static/css/main.f3a4951f.css",
+    "main.js": "/coursera-final/static/js/main.a5cfe16b.js",
     "static/media/MarioAdrian.jpg": "/coursera-final/static/media/MarioAdrian.6ba0e06bfa9c1ea75109.jpg",
     "static/media/restaurant-chef.jpg": "/coursera-final/static/media/restaurant-chef.4b4c2d26b514db32e8fc.jpg",
     "static/media/greek salad.jpg": "/coursera-final/static/media/greek salad.bed423a1fab5b210e347.jpg",
@@ -10,11 +10,11 @@
     "static/media/restaurant.jpg": "/coursera-final/static/media/restaurant.324d0f99bdf19400a0f7.jpg",
     "static/media/Logo .svg": "/coursera-final/static/media/Logo .f72c913c48c5334f78f2c336ec36f22b.svg",
     "index.html": "/coursera-final/index.html",
-    "main.0b246efe.css.map": "/coursera-final/static/css/main.0b246efe.css.map",
-    "main.46c8a726.js.map": "/coursera-final/static/js/main.46c8a726.js.map"
+    "main.f3a4951f.css.map": "/coursera-final/static/css/main.f3a4951f.css.map",
+    "main.a5cfe16b.js.map": "/coursera-final/static/js/main.a5cfe16b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b246efe.css",
-    "static/js/main.46c8a726.js"
+    "static/css/main.f3a4951f.css",
+    "static/js/main.a5cfe16b.js"
   ]
 }
