@@ -9,8 +9,5 @@ Features
 - Smooth navigation and scroll behavior
 - Responsive, branded UI based on the Little Lemon design system
 - Clean component structure using React Router
-Setup Instructions
-- Clone the repository
-- Install dependencies
-- Start the development server
+
 - Preview Link: https://janderscj.github.io/coursera-final/
